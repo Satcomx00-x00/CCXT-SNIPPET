@@ -68,3 +68,14 @@ exchange = exchange_class(
     }
 )
 ```
+### Check if ORDER is OPEN
+
+```python
+def verify_open_order(trade_id):
+    orders = exchange.fetch_open_orders(symbol)
+    for order in orders:
+        if trade_id == order["info"]["orderId"]:
+            return True                     # ORDER IS ACTIVE, ORDER_ID MATCHED
+        else:
+            return False                    # ORDER NOT ACTIVE ,NO ORDER MATCH
+```
