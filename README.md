@@ -71,7 +71,7 @@ exchange = exchange_class(
 ### Check if ORDER is OPEN/CLOSE
 
 ```python
-def verify_open_order(trade_id):
+def verify_open_order(trade_id,symbol):
     orders = exchange.fetch_open_orders(symbol)
     for order in orders:
         if trade_id == order["info"]["orderId"]:
