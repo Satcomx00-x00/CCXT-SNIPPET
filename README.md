@@ -18,7 +18,7 @@ trade_output = exchange.create_order(
     symbol=SYMBOL, type="limit", price=PRICE, side="sell", amount=VOLUME
 )
 ```
-## LIMIT Close position Binance Futures with ccxt
+## LIMIT Close position Futures with ccxt
 
 ```python
 exchange.create_order(
