@@ -63,7 +63,7 @@ exchange = exchange_class(
         "enableRateLimit": True,
         "options": {
             "defaultType": "future",  # ←-------------- Future mode
-            "hedgeMode": False,
+            "hedgeMode": False,       # ←-------------- Hedge mode
         },
     }
 )
