@@ -1,5 +1,5 @@
 # CCXT-SNIPPET
-
+## Usefull CCXT Python snippets
 #### MARKET Close position Futures with ccxt 
 ```python
 close_sell_position = exchange.create_order(
