@@ -30,7 +30,7 @@ exchange.create_order(
     params={"stopPrice": STOP_PRICE_VAL, "reduceOnly": True},
 )
 ```
-## API call from config file / Future market / Binance Hedge mode
+## API call from config file / Future market / Binance Hedge mode / Set Leverage
 #### settings.cfg file template
 ```cfg
 [BINANCE]
@@ -65,6 +65,15 @@ exchange = exchange_class(
             "defaultType": "future",  # ←-------------- Future mode
             "hedgeMode": False,       # ←-------------- Hedge mode
         },
+    }
+)
+
+markets = exchange.load_markets()
+market = exchange.market(symbol)
+exchange.fapiPrivate_post_leverage(
+    {
+        "symbol": market["id"],
+        "leverage": 15,             # ←-------------- Set leverage value here
     }
 )
 ```
