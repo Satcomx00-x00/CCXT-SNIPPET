@@ -68,7 +68,7 @@ exchange = exchange_class(
     }
 )
 ```
-### Check if ORDER is OPEN
+### Check if ORDER is OPEN/CLOSE
 
 ```python
 def verify_open_order(trade_id):
