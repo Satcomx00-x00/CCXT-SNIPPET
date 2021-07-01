@@ -10,9 +10,7 @@ close_sell_position = exchange.create_order(
         params={"reduceOnly": "true"},
     )
 ```
-```python
 
-```
 
 ## LIMIT Close position Futures with ccxt
 ```python
