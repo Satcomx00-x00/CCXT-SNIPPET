@@ -68,6 +68,7 @@ exchange = exchange_class(
     }
 )
 ```
+## Functions 
 ### Check if ORDER is OPEN/CLOSE
 
 ```python
@@ -78,4 +79,11 @@ def verify_open_order(trade_id,symbol):
             return True                     # ORDER IS ACTIVE, ORDER_ID MATCHED
         else:
             return False                    # ORDER NOT ACTIVE ,NO ORDER MATCH
+```
+### Check Symbol Price
+
+```python
+def check_price(exchange, symbol):
+    x = exchange.fetch_ticker(symbol)
+    return float(x["info"]["lastPrice"])
 ```
