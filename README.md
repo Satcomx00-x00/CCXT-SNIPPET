@@ -30,7 +30,7 @@ exchange.create_order(
     params={"stopPrice": STOP_PRICE_VAL, "reduceOnly": True},
 )
 ```
-## API call from config file / Future market / Binance Hedge mode / Set Leverage
+## API call from config file / Future market / Binance Hedge mode / Binance Set Leverage
 #### settings.cfg file template
 ```cfg
 [BINANCE]
