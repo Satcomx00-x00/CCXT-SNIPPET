@@ -87,7 +87,7 @@ def verify_open_order(trade_id,symbol):
         if trade_id == order["info"]["orderId"]:
             return True                     # ORDER IS ACTIVE, ORDER_ID MATCHED
         else:
-            return False                    # ORDER NOT ACTIVE ,NO ORDER MATCH
+            return False                    # ORDER NOT ACTIVE, NO ORDER MATCH
 ```
 ### Check Symbol Price
 
