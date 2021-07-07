@@ -28,7 +28,7 @@ exchange.create_order(
     price=ORDER_PRICE,
     amount=VOLUME,
     params={
-        "stopPrice": ORDER_PRICE, # can be change
+        "stopPrice": ORDER_PRICE, # can be changed
         "reduceOnly": True,
     },
 )
