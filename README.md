@@ -24,10 +24,13 @@ trade_output = exchange.create_order(
 exchange.create_order(
     symbol=SYMBOL,
     type="TAKE_PROFIT",
-    side="sell",  # buy/sell
-    price=TP_PRICE,
+    side="sell",  # sell if you want to close a long order / buy if you want to close a short order
+    price=ORDER_PRICE,
     amount=VOLUME,
-    params={"stopPrice": STOP_PRICE_VAL, "reduceOnly": True},
+    params={
+        "stopPrice": ORDER_PRICE, # can be change
+        "reduceOnly": True,
+    },
 )
 ```
 ## API call from config file / Future market / Binance Hedge mode / Binance Set Leverage
