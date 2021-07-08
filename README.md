@@ -12,7 +12,7 @@ close_sell_position = exchange.create_order(
 ```
 
 
-#### LIMIT Close position Futures with ccxt
+#### LIMIT Open position Futures with ccxt
 ```python
 trade_output = exchange.create_order(
     symbol=SYMBOL, type="limit", price=PRICE, side="sell", amount=VOLUME
