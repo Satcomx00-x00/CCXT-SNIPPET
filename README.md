@@ -33,6 +33,19 @@ exchange.create_order(
     },
 )
 ```
+```python
+order = exchange.create_order (
+    symbol=SYMBOL,
+    type="TAKE_PROFIT_MARKET",
+    price=32780,
+    side="SELL",  
+    amount=VOLUME,
+    params={"positionSide": "LONG","stopPrice":32780},
+)
+# to close a LONG order => positionSide = "LONG" and side="SELL"
+# to close a SHORT order => positionSide = "SHORT" and side="BUY"
+# i recomend to set price = stopPrice
+```
 ## API call from config file / Future market / Binance Hedge mode / Binance Set Leverage
 #### settings.cfg file template
 ```cfg
